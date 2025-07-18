@@ -1,0 +1,40 @@
+@charset "utf-8"
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrap {
+  background-color: antiquewhite;
+  width: 80%;
+  margin: auto;
+}
+.header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header > h1 {
+}
+.manu {
+  background-color: #5e5e5e;
+  height: 50px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+}
+.manu > a {
+  padding: 10px;
+  align-items: center;
+  color: antiquewhite;
+  text-decoration: none;
+}
+.manu > a::after {
+  position: absolute;
+  transform: translatex(50%);
+  right: 0;
+  display: inline-block;
+}
