@@ -31,10 +31,21 @@
   align-items: center;
   color: antiquewhite;
   text-decoration: none;
+  position: relative;
 }
+
+/* @@@ |자 표시하고싶은대 안댐 ㅠㅠ */
 .manu > a::after {
   position: absolute;
-  transform: translatex(50%);
+  /* transform: translatex(-50%); */
+  top: 0;
   right: 0;
+  width: 1px;
+  height: 0;
   display: inline-block;
+/* ???????????????? */
 }
+.manu > a:last-child::after {
+/* ?????????????? */
+}
+
