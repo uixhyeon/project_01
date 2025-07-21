@@ -4,12 +4,69 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* %% a와 ul을 바꾸기~~ */
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+/* 전체 레이아웃 */
 .wrap {
   background-color: antiquewhite;
-  width: 80%;
+  width: 1200px;
   margin: auto;
 }
-.header {
+/* 상단 */
+.header{
+  height: 100px;
+  display: flex;
+  background-color: aquamarine;
+  align-items: center;
+  text-align: center;
+}
+/* 상단왼쪽 */
+.logo{
+  width: 200px;
+background-color: rgb(34, 146, 245);
+}
+/* a는 직접 줘야한다 ~ 부모에서 적용안됌 딴던 되어도 칼라는 xxx */
+.logo > a {
+font-size: 30px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+color: #fff;
+}
+/* 상단오른꼭 */
+nav{
+  width: 1000px;
+  background-color: blue;
+}
+#topMenu{
+  background-color: brown;
+  width: 800px;
+  display: flex;
+}
+#topMenu > li{
+  width: calc(100% / 4);
+
+}
+#topMenu > li > a {
+
+
+}
+#topMenu > li > a:hover{
+
+  
+}
+
+
+
+
+
+
+/* .header {
   background-color: #333;
   color: #fff;
   display: flex;
@@ -22,8 +79,8 @@
   background-color: #5e5e5e;
   height: 50px;
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 0px;
+  right: 10px;
   display: flex;
 }
 .manu > a {
@@ -35,17 +92,16 @@
 }
 
 /* @@@ |자 표시하고싶은대 안댐 ㅠㅠ */
-.manu > a::after {
+/* .manu > a::after {
   position: absolute;
   /* transform: translatex(-50%); */
-  top: 0;
+  /* top: 0;
   right: 0;
   width: 1px;
   height: 0;
-  display: inline-block;
+  display: inline-block; */
 /* ???????????????? */
-}
-.manu > a:last-child::after {
-/* ?????????????? */
-}
+/* } */
+/* .manu > a:last-child::after { */
+
 
