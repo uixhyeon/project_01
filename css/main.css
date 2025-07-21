@@ -1,14 +1,15 @@
-@charset "utf-8"
+@charset "utf-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 /* %% a와 ul을 바꾸기~~ */
-ul,li{
+ul,
+li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: #333;
 }
@@ -19,89 +20,114 @@ a{
   margin: auto;
 }
 /* 상단 */
-.header{
+.header {
   height: 100px;
   display: flex;
-  background-color: aquamarine;
+  background-color: darkcyan;
   align-items: center;
   text-align: center;
 }
 /* 상단왼쪽 */
-.logo{
+.logo {
   width: 200px;
-background-color: rgb(34, 146, 245);
+  background-color: darkcyan;
 }
 /* a는 직접 줘야한다 ~ 부모에서 적용안됌 딴던 되어도 칼라는 xxx */
 .logo > a {
-font-size: 30px;
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-weight: bold;
-color: #fff;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #fff;
 }
 /* 상단오른꼭 */
-nav{
+nav {
   width: 1000px;
-  background-color: blue;
+  height: 100px;
+  background-color: #ff7f50;
+  position: relative;
 }
-#topMenu{
-  background-color: brown;
+#topMenu {
+  background-color: #ff7f50;
   width: 800px;
   display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
 }
-#topMenu > li{
+#topMenu > li {
+  /* line-height: 30px; */
   width: calc(100% / 4);
-
 }
 #topMenu > li > a {
-
-
+  display: block;
+  line-height: 60px;
+  /* 글꼴 추가  */
+  font-size: 20px;
+  font-weight: 550;
 }
-#topMenu > li > a:hover{
+#topMenu > li > a:hover {
+  background-color: chartreuse;
+  color: red;
+}
 
+/* 메인 */
+.contents {
+  width: 100%;
+}
+.hilling {
+  width: 100%;
+  padding: 20px;
+}
+.description {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  background-color: transparent;
+}
+.desc-img {
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  display: block;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.desc-img:hover img {
+  transform: scale(1.2);
+  overflow: hidden;
+  filter: blur(1px);
+ 
+}
+/* 자세한 설명 */
+.desc-detail {
+  width: 600px;
+  background-color: #ff7f50;
+}
+.detail-top {
+  margin-bottom: 20px;
+}
+.p_top {
+  margin-bottom: 10px;
+}
+.footer {
   
+  width: 100%;
 }
-
-
-
-
-
-
-/* .header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+.footer > nav{
+width: 100%;
+display: flex;
+margin left: 20px;
 }
-.header > h1 {
+.footer > nav > a {
+ display: block;
+  line-height: 20px;
+  margin: 10px;
 }
-.manu {
-  background-color: #5e5e5e;
-  height: 50px;
-  position: absolute;
-  bottom: 0px;
-  right: 10px;
-  display: flex;
+.footer > nav > a::after {
+  content: "|";
+  margin-left: 10px;
+   /* display: block; */
 }
-.manu > a {
-  padding: 10px;
-  align-items: center;
-  color: antiquewhite;
-  text-decoration: none;
-  position: relative;
+.footer > nav > a:last-child{
+  content: " ";
 }
-
-/* @@@ |자 표시하고싶은대 안댐 ㅠㅠ */
-/* .manu > a::after {
-  position: absolute;
-  /* transform: translatex(-50%); */
-  /* top: 0;
-  right: 0;
-  width: 1px;
-  height: 0;
-  display: inline-block; */
-/* ???????????????? */
-/* } */
-/* .manu > a:last-child::after { */
-
-
